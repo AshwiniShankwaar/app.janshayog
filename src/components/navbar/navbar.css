@@ -1,0 +1,90 @@
+#navbar {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 2rem;
+    background-color: #313742;
+  }
+  
+  #navbar img {
+    width: 3rem;
+  }
+  
+  #nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* add this line to distribute space evenly between nav-link and nav-profile */
+    width: -webkit-fill-available; /* add this line to set a maximum width for the nav container */
+  }
+  
+  #nav-link {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 2rem;
+  }
+  
+  #nav-profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  #nav-profile a:last-child {
+    margin-right: 0; /* remove the right margin on the last link */
+  }
+#mobile{
+    display: none;
+}
+#navbar a{
+    text-decoration: none;
+    color: rgb(248, 230, 230);
+    font-size: 1.02rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+  }
+#navbar a:hover{
+color:#f94a47;
+}
+#nav-link a.active{
+  color:#f94a47;
+}
+#mobile i{
+  color: aliceblue;
+}
+@media screen and (max-width: 786px) {
+    #mobile {
+        display: block;
+      }
+    #nav{
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: fixed;
+      gap:2rem;
+      top: 50px;
+      left: -310px;
+      width: 300px;
+      height: 100vh;
+      background: #7fa9d6;
+      padding: 40px 0 0 10px;
+      transition: 0.3s ease-in-out;
+    }
+    #nav.active{
+        left:0px;
+    }
+    #navbar{
+        justify-content: space-between;
+    }
+    #nav-link{
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    #nav-profile{
+        flex-direction: column;
+        
+    }
+    #nav a{
+        color: white;
+    }
+}

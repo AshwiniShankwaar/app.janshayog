@@ -1,0 +1,161 @@
+#personalInfo{
+    padding:10px;
+}
+#personalInfo form{
+    padding: 10px;
+}
+#nameSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5em;
+    margin: 10px;
+}
+#nameSection input{
+    width: -webkit-fill-available;
+    padding: 8px;
+    font-size: 14px;
+}
+#emailSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5em;
+    margin: 10px;
+}
+#emailSection label{
+    width: -webkit-fill-available;
+    padding: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#emailSection p{
+    margin: 0;
+    min-width: max-content;
+}
+#emailSection input{
+    width: -webkit-fill-available;
+    padding: 8px;
+    font-size: 14px;
+}
+#emailSection label select{
+    padding: 8px;
+    font-size: 14px;
+}
+#emailSection label select option{
+    padding: 8px;
+    font-size:14px;
+}
+#dobSection{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin: 10px;
+}
+#dobSection label{
+    padding: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#dobSection p{
+    margin: 0;
+    min-width: max-content;
+}
+#dobSection input{
+    width: max-content;
+    padding: 8px;
+    font-size: 14px;
+}
+.datepicker{
+    width:fit-content;
+}
+#alternative{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin: 10px;
+}
+#alternative label{
+    padding: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#alternative input{
+    width: max-content;
+    padding: 8px;
+    font-size: 14px;
+}
+.small{
+    font-size: 12px;
+}
+#AccountType{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin: 10px;
+}
+#AccountType label{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin: 10px;
+}
+#AccountType label input{
+    width: max-content;
+    padding: 8px;
+    font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+    #nameSection{
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 0px;;
+    }
+    #emailSection{
+        flex-direction: column;
+        gap: 1px;
+        margin: 0px;
+    }
+    #emailSection label{
+        width: 100%;
+    }
+    #emailSection input{
+        padding: 7.9px;
+    }
+    #emailSection label select{
+        padding:7.8px;
+    }
+    #dobSection{
+        flex-direction: column;
+        gap: 1px;
+        margin: 0px;
+        align-items: flex-start;
+    }
+    #dobSection label{
+        padding:5px;
+    }
+    #alternative{
+        flex-direction: column;
+        gap:1.2px;
+        margin:0px;
+        align-items: flex-start;
+    }
+    #alternative p{
+        margin: 0px;
+    }
+    #alternative label{
+        padding:5px;
+    }
+    #AccountType{
+        margin: 0px;
+    }
+    #AccountType label{
+        margin: 0px;
+    }
+}

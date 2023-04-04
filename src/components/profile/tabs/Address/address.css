@@ -1,0 +1,57 @@
+#address{
+    padding:10px;
+}
+#address form{
+    padding: 10px;
+    display: flex;
+    gap:0.7rem;
+    flex-direction: column;
+}
+#address form p{
+    margin: 0px;
+    align-self: flex-start;
+}
+#address form input{
+    width: -webkit-fill-available;
+    padding: 8px;
+    font-size: 14px;
+}
+#street{
+    display: flex;
+    gap:2rem;
+}
+#locality{
+    display: flex;
+    gap:2rem;
+}
+#state{
+    display: flex;
+    gap:2rem;
+}
+#state div{
+    display: flex;
+    align-items: center;
+}
+#state div label{
+    min-width: max-content;
+}
+@media screen and (max-width: 768px) {
+    #address form{
+        gap:0.4rem;
+    }
+    #street{
+        gap:0.3rem;
+        flex-direction: column;
+    }
+    #state{
+        gap: 0.4rem;
+        flex-direction: column;
+    }
+    #locality{
+        gap:0.3rem;
+        flex-direction: column;
+    }
+    #state div input{
+        max-width: fit-content;
+    }
+}

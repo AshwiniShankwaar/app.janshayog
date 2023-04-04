@@ -1,0 +1,47 @@
+#profilePage{
+    background-color: rgb(247, 243, 243);
+}
+#profilePage #container{
+    display: flex;
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+    overflow: hidden;
+    gap:2rem;
+}
+#profilePage #container p{
+    margin:0px;
+}
+#profilePage #container #personalInfo,
+#profilePage #container #contactDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 13px;
+    background: #e0e0e0;
+    padding: 10px;
+    box-shadow: 1px 2px 10px #cccccc, -1px -2px 10px #f4f4f4;
+}
+#profilePage #container #contactDetails #contactAddress{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+#profilePage #container #personalInfo #dp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#profilePage #container #personalInfo #dp img{
+    width: -webkit-fill-available;
+    border-radius: 50%;
+    width: 150px;
+}
+#profilePage #container #personalInfo #info{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+#profilePage #container #personalInfo #dp #accountType{
+    font-size: xx-small;
+}

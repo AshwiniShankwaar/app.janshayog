@@ -1,0 +1,77 @@
+#EmergencyContact{
+    padding:10px;
+}
+#EmergencyContact form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: stretch;
+    gap: 1rem;
+}
+#EnameSection{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+#EmergencyContact form input{
+    width: -webkit-fill-available;
+    padding: 8px;
+    font-size: 14px;
+}
+#EmergencyContact form label{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: -webkit-fill-available;
+}
+#EmergencyContact form label p{
+    margin: 0px;
+    min-width: fit-content;
+}
+#genderSection{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+#EmergencyContact form #genderSection select{
+    width: -webkit-fill-available;
+    /* min-width: -webkit-fill-available; */
+    padding: 8px;
+}
+#contactSection{
+    align-items: center;
+    display: flex;
+    gap:1rem;
+}
+#addressSection{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#addressSection div{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+    #EnameSection{
+        flex-direction: column;
+        gap:1rem;
+    }
+    #genderSection{
+        flex-direction: column;
+        gap:1rem;
+    }
+    #contactSection{
+        flex-direction: column;
+        gap:1rem;
+    }
+    #addressSection{
+        flex-direction: column;
+        gap:1rem;
+    }
+    #addressSection div{
+        flex-direction: column;
+        gap:1rem;
+    }
+}

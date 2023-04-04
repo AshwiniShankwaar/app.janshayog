@@ -1,0 +1,15 @@
+#VerificationMessage{
+    font-size: 1.5em;
+    color: #3d3c3c;
+    text-align: center;
+    margin: 10px auto;
+    width: 70%;
+}
+#VerificationMessage button{
+    width:20vh;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+}
+#VerificationMessage button:hover{
+    transform: scale(1.05);
+}

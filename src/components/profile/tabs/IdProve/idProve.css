@@ -1,0 +1,75 @@
+#idprove{
+    padding: 10px;
+}
+#idprove form{
+    padding: 10px;
+    display: flex;
+    gap:1px;
+    flex-direction: column;
+}
+#GovermentId{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 10px;
+}
+#GovermentInput{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#GovermentInput label{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+#GovermentInput label p{
+    margin: 0px;
+    min-width: fit-content;
+}
+#GovermentInput label select{
+    width: 100%;
+    padding:8px;
+}
+#GovermentInput label button{
+    margin: 10px;
+    padding: 10px;
+}
+#GovermentInput label input{
+    width: 100%;
+    padding:8px;
+}
+
+.FileInput{
+    border: 1px solid #3e71f4;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    min-width: 150px;
+    border-radius: 10px;
+}
+#AddressId{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 10px;
+}
+.idHead{
+    margin: 0px;
+    font-weight: 600;
+}
+#transprantButton{
+    display: flex;
+    background-color: transparent;
+    color: blue;
+    font-size: 12px;
+    width: fit-content;
+}
+@media screen and (max-width: 768px){
+    #GovermentInput label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap:12px;
+    }
+    
+}

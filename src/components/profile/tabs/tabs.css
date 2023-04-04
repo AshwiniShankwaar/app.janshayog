@@ -1,0 +1,38 @@
+.tab-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .tab-menu li {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+    width: -webkit-fill-available;
+    text-align: center;
+    font-size:0.84em;
+  }
+  
+  .tab-menu li.active {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: rgb(61, 61, 249);
+  }
+  
+  .tab-menu li:last-child {
+    margin-right: 0;
+  }
+  .buttonSubmit{
+    width: 100px;
+    border-radius: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    .tab-menu li{
+        font-size: 10px;
+    align-self: center;
+    }
+  }
