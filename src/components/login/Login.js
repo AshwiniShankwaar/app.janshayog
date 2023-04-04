@@ -9,6 +9,9 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { type } = useParams();
   const navigate = useNavigate();
+  sessionStorage.removeItem("AccountId");
+  sessionStorage.removeItem("AccountType");
+  sessionStorage.removeItem("EmailId");
   if (type === "helper" || type === "requester") {
     const isValidEmail = (email) => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

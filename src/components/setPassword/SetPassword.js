@@ -11,6 +11,10 @@ const SetPassword = () => {
   const [password, setPassword] = useState("");
   const [repasswords, setRepasswords] = useState("");
 
+  sessionStorage.removeItem("AccountId");
+    sessionStorage.removeItem("AccountType");
+    sessionStorage.removeItem("EmailId");
+
   const isValid =()=>{
 
     if (password.length < 8 || password.length > 20 ) {

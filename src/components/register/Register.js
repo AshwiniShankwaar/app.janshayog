@@ -10,16 +10,21 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  sessionStorage.removeItem("AccountId");
+    sessionStorage.removeItem("AccountType");
+    sessionStorage.removeItem("EmailId");
+
   if (type === "helper" || type === "requester") {
     const isValidEmail = (email) => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);
     };
 
-    const isAlphanumeric = (password) => {
-      const alphanumericRegex = /^[a-zA-Z0-9]+$/;
-      return alphanumericRegex.test(password);
-    };
+    // const isAlphanumeric = (password) => {
+    //   const alphanumericRegex = /^[a-zA-Z0-9]+$/;
+    //   return alphanumericRegex.test(password);
+    // };
 
     const isValid = () => {
       if (email === "" || password === "" || rePassword === "") {

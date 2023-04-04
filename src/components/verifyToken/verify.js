@@ -1,10 +1,12 @@
-import { useLocation,useNavigate } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 import './verify.css';
 const Verify =() =>{
-    const navigate = useNavigate();
     const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const message = queryParams.get('message');
+  sessionStorage.removeItem("AccountId");
+    sessionStorage.removeItem("AccountType");
+    sessionStorage.removeItem("EmailId");
   const handleClick = () =>{
     window.location.href = "http://localhost:3001/";
   }

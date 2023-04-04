@@ -1,12 +1,12 @@
 #profilePage{
     background-color: rgb(247, 243, 243);
+    font-size: 15px;
 }
 #profilePage #container{
     display: flex;
     padding: 10px;
     width: 80%;
     margin: 10px auto;
-    overflow: hidden;
     gap:2rem;
 }
 #profilePage #container p{
@@ -17,15 +17,39 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    border-radius: 13px;
-    background: #e0e0e0;
     padding: 10px;
-    box-shadow: 1px 2px 10px #cccccc, -1px -2px 10px #f4f4f4;
+    background: white;
+ border-radius: 10px;
+ transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#profilePage #container #personalInfo #dp img{
+    margin:10px 0px;
+}
+#profilePage #container #contactDetails #emergencyContact #name #lableTitle{
+    font-weight: 500;
+    margin-right: 10px;
 }
 #profilePage #container #contactDetails #contactAddress{
     display: flex;
     gap: 1rem;
     flex-direction: column;
+}
+#profilePage #container #contactDetails #contactAddress #current .lableTitle,
+#profilePage #container #contactDetails #contactAddress #permanent .lableTitle
+{
+    font-weight: 500;
+    margin-right: 10px;
+}
+#profilePage #container #contactDetails #documents{
+    display: flex;
+    gap: 2rem;
+}
+#profilePage #container #contactDetails #documents #doc{
+    display: flex;
+    gap:10px;
+}
+#profilePage #container #contactDetails #documents #downloads{
+    color:blue;
 }
 #profilePage #container #personalInfo #dp{
     display: flex;
@@ -44,4 +68,73 @@
 }
 #profilePage #container #personalInfo #dp #accountType{
     font-size: xx-small;
+}
+label.lableTitle {
+    font-weight: 500;
+    margin-right: 10px;
+}
+label.lableHeading{
+    font-weight: 600;
+    color: steelblue;
+    font-size: 16px;
+}
+
+#deactivateButton{
+    width: fit-content;
+    padding: 10px;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    z-index: 999;
+  }
+  .popup-open {
+    overflow: hidden;
+    opacity: 0.5;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  #deactivate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+#otp{
+    width: -webkit-fill-available;
+    padding: 7px;
+    margin: 10px 0px;
+}
+.cancelButton{
+    background-color: rgb(250, 78, 78);
+}
+.editProfile{
+    margin:auto;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+#profilePage #container{
+    flex-direction: column;
+    width: 95%;
+}
+
+
+#profilePage #container #contactDetails #documents{
+    flex-direction: column;
+}
+}
+@media screen and (max-width: 900px){
+    #profilePage #container{
+        flex-direction: column;
+        width: 95%;
+    }
 }

@@ -5,6 +5,9 @@ const Home = () => {
   const { type } = useParams();
   // console.log(type);
   const Navigate = useNavigate();
+  sessionStorage.removeItem("AccountId");
+    sessionStorage.removeItem("AccountType");
+    sessionStorage.removeItem("EmailId");
   const handleNavigate = (link) => {
     Navigate(link);
   }

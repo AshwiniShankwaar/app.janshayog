@@ -63,7 +63,7 @@
     background-color: transparent;
     color: blue;
     font-size: 12px;
-    width: fit-content;
+    width: -moz-fit-content;
 }
 @media screen and (max-width: 768px){
     #GovermentInput label {

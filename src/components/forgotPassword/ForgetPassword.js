@@ -5,6 +5,9 @@ const Forget =()=>{
     const [email,setEmail]=useState("");
     const [isLoading, setIsLoading] = useState(false);
 
+    sessionStorage.removeItem("AccountId");
+    sessionStorage.removeItem("AccountType");
+    sessionStorage.removeItem("EmailId");
     const isValidEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
