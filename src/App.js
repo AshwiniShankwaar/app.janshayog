@@ -11,6 +11,8 @@ import ForgotPassword from "./components/forgotPassword/ForgetPassword.js";
 import SetPassword from "./components/setPassword/SetPassword.js";
 import Profile from "./components/profile/Profile.js";
 import ViewProfile from './components/viewProfile/ViewProfile';
+import Wallet from "./components/Wallet/wallet/Wallet.js";
+import Transaction from "./component/Wallet/transaction/Transaction.js";
 function App() {
   return (
     <div className="App">
@@ -25,7 +27,8 @@ function App() {
          <Route exact path="/setPassword" element={<SetPassword/>}></Route>
          <Route exact path="/editProfile" element={<Profile/>}></Route>
          <Route exact path="/profile" element={<ViewProfile/>}></Route>
-
+         <Route exact path="/wallet" element={<Wallet/>}></Route>
+         <Route exact path="/transaction" element={<Transaction/>}></Route>
          <Route path='*' element={<ServerHome/>}></Route>
       </Routes>
     </div>
