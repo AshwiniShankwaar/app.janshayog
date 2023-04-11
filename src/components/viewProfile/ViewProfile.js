@@ -93,7 +93,7 @@ const ViewProfile = () => {
             window.location.href = "/";
           } else {
             // console.log(res.user);
-            console.log(res.account);
+            //console.log(res.account);
             setUserData(res.user);
             setAccountData(res.account);
             setCurrentAddress(res.user.currentAddress);

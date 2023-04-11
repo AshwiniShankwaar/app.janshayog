@@ -1,0 +1,33 @@
+#wallet{
+    background-color: rgb(247, 243, 243);
+    font-size: 15px;
+}
+#wallet #walletContainer{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+#wallet #walletContainer #walletMain{
+    width: 70%;
+    margin: 10px;
+    gap: 2rem;
+    display: flex;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    flex-direction: column;
+}
+#wallet #walletContainer #walletMain #walletLastTransactions{
+    margin: 10px 0px;
+    text-align: center;
+}
+#wallet #walletContainer #walletSideBar #cmpltTask{
+    margin: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    flex-direction: column;
+}

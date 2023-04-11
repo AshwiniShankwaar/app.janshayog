@@ -1,0 +1,15 @@
+.transaction{
+    border-top: 1px solid;
+    width: -webkit-fill-available;
+}
+.transaction p{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.transaction span{
+    margin: 0px 5px;
+}
+.transaction span label{
+    font-weight: 500;
+}

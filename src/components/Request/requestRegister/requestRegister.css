@@ -1,0 +1,13 @@
+.payableAmount{
+    align-self: baseline;
+    width: fit-content;
+}
+.payableAmount input{
+    width: fit-content;
+}
+.checkbox{
+    width: fit-content;
+    align-self: baseline;
+    font-size: 18px;
+    margin: 10px 0px;
+}

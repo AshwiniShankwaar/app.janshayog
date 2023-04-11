@@ -1,0 +1,27 @@
+.balance-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.balance-container h1{
+    font-size: 20px;
+    margin: 5px;
+}
+.balance-container .balance-walletId{
+    font-size: 14px;
+    margin: 0px;
+}
+.balance{
+    font-size: 22px;
+    font-weight: 500;
+}
+.balance-button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.balance-button button{
+    min-width: max-content;
+    padding:10px;
+    font-size: 12px;
+}

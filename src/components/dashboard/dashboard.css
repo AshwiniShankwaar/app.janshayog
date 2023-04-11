@@ -1,0 +1,56 @@
+#dashboard{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    gap: 2rem;
+}
+#dashboardMain{
+    width: 70%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#dashboardMain button{
+    width: 130px;
+}
+#dashboardMain .div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: -webkit-fill-available;
+    margin: 10px;
+}
+#dashboardMain .div label{
+    min-width: max-content;
+}
+#dashboardMain .div input{
+    width: -webkit-fill-available;
+    padding: 8px;
+}
+#dashboardMain .div textarea{
+    width: -webkit-fill-available;
+    height: 250px;
+}
+#dashboardSideBar{
+    margin: 10px;
+    display: flex;
+    width: 30%;
+    gap: 10px;
+    flex-direction: column;
+}
+.dashboard-box{
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#dashboardMain #description{
+    flex-direction: column;
+    align-items: baseline;
+}

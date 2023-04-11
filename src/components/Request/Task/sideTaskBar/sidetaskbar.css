@@ -1,0 +1,23 @@
+#tasksidebar{
+    width: -webkit-fill-available;
+    border-top: 1px solid;
+    padding: 10px;
+}
+#tasksidebar h2{
+    margin: 0px;
+    font-size: 13px;
+    font-weight: 600;
+}
+#tasksidebar p{
+    margin: 0px;
+    font-size: 14px;
+}
+#tasksidebar #dateandtimetask{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+#tasksidebar #dateandtimetask label{
+    font-size: 12px;
+}

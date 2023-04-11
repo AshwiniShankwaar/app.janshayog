@@ -12,7 +12,7 @@ import SetPassword from "./components/setPassword/SetPassword.js";
 import Profile from "./components/profile/Profile.js";
 import ViewProfile from './components/viewProfile/ViewProfile';
 import Wallet from "./components/Wallet/wallet/Wallet.js";
-import Transaction from "./component/Wallet/transaction/Transaction.js";
+import Transaction from "./components/Wallet/transactions/Transaction.js";
 function App() {
   return (
     <div className="App">

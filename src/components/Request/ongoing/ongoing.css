@@ -1,0 +1,9 @@
+#ongoingTask{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#ongoingTask h1{
+    font-size: 20px;
+    margin: 5px;
+}

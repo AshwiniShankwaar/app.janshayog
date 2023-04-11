@@ -41,12 +41,12 @@ const Tabs = () => {
   const [permanentpinCode, setpermanentPinCode] = useState();
   const [permanentcountry, setpermanentCountry] = useState("India");
   //goverment id
-  const [idSerialNo, setIdSerialNo] = useState();
+  const [idSerialNo, setIdSerialNo] = useState(null);
   const [idNumber, setIdNumber] = useState("");
   const [IdProveType, setIdProveType] = useState("");
 
   //addressprove id
-  const [addressIdSerialNo, setAddressIdSerialNo] = useState();
+  const [addressIdSerialNo, setAddressIdSerialNo] = useState(null);
   const [addressIdNumber, setAddressIdNumber] = useState("");
   const [addressIdProveType, setAddressIdProveType] = useState("");
 
@@ -121,12 +121,12 @@ const Tabs = () => {
         pincode: pinCode,
       },
       govermentId: {
-        idSerialNo: idSerialNo.id,
+        idSerialNo: idSerialNo,
         idNumber: idNumber,
         idProveType: IdProveType,
       },
       addressProve: {
-        idSerialNo: addressIdSerialNo.id,
+        idSerialNo: addressIdSerialNo,
         idNumber: addressIdNumber,
         idProveType: addressIdProveType,
       },
@@ -286,14 +286,14 @@ const Tabs = () => {
         return res.json();
       })
       .then((res) => {
-        console.log(res);
+        //console.log(res);
         if (res.message === "error while saving data") {
           toast.error("Error while saving data,Try again later");
         } else if (res.message === "Data saved") {
           toast.success("Data saved successfully");
           setTimeout(() => {
             navigate(
-              "/dashboard?accountId=" + sessionStorage.getItem("AccountId")
+              "/profile"
             );
           }, 3000);
         }
@@ -319,11 +319,9 @@ const Tabs = () => {
         })
         .then((res) => {
           //console.log(res);
-          if(res.message ==="not found"){
-            window.alert("Not Found");
-            window.location.href = "/";
-          }else{
-            console.log(res.user);
+          if(res.message !=="not found"){
+
+            //console.log(res.user);
             setFirstName(res.user.firstname);
             setMiddleName(res.user.middleName);
             setLastName(res.user.lastname);
@@ -397,11 +395,13 @@ const Tabs = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     if (activeTab === 3) {
+     // console.log(idSerialNo+" "+addressIdSerialNo+" "+activeTab)
       await setEmergencyAddressData();
       if (emergencyAddress) {
         const obj = await createObj();
-        console.log(obj);
+        
         await addUserDetails(obj);
+        //await console.log(obj);
       }
       //console.log(createObj());
     } else {
