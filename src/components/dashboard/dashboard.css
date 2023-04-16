@@ -36,6 +36,7 @@
 #dashboardMain .div textarea{
     width: -webkit-fill-available;
     height: 250px;
+    padding:10px;
 }
 #dashboardSideBar{
     margin: 10px;
@@ -53,4 +54,11 @@
 #dashboardMain #description{
     flex-direction: column;
     align-items: baseline;
+}
+#payableAmount{
+    align-self: baseline;
+    width: fit-content;
+}
+#payableAmountinput{
+    width: fit-content;
 }

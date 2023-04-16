@@ -5,7 +5,7 @@ function ServerHome(){
         sessionStorage.removeItem("AccountId");
     sessionStorage.removeItem("AccountType");
     sessionStorage.removeItem("EmailId");
-        window.location.href = "http://localhost:3001/";
+        window.location.href = "https://janshayog.azurewebsites.net";
     })
 
 }
