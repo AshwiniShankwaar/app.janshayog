@@ -259,7 +259,7 @@ const RequestRegister = () => {
             setLegal(!legal);
           }}
         />
-        <label htmlFor="legal"> No legal activity is performed.</label>
+        <label htmlFor="legal"> No illegal activity is performed.</label>
       </div>
       <div className="checkbox">
         <input
