@@ -1,0 +1,10 @@
+#searchButton{
+    width: 50px;
+    border-radius: 50%;
+    margin:auto;
+}
+#search{
+    display: flex;
+    gap: 2rem;
+    width:-webkit-fill-available;
+}

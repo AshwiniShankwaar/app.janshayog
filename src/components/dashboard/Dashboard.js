@@ -101,13 +101,13 @@ const Dashboard = () => {
       <Navbar />
 
       <div id="dashboard">
-      <div id="dashboardMain">
+     
         {sessionStorage.getItem("AccountType") === "requester" ? (
           <RequestRegister />
         ) : (
           <RequestShow />
         )}
-      </div>
+
       <div id="dashboardSideBar">
         <div className="dashboard-box">
           {loading ? (

@@ -22,7 +22,7 @@ const Navbar = () => {
         <div id="nav" className={clicked ? "#nav active" : "#nav"}>
           <div id="nav-link">
             <NavLink to="/Dashboard">Dashboard</NavLink>
-            <NavLink to="/tasks">Tasks</NavLink>
+            <NavLink to="/task">Tasks</NavLink>
             <NavLink to="/wallet">Wallet</NavLink>
             <NavLink to="/about">About</NavLink>
           </div>

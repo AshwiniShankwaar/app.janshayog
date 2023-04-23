@@ -13,6 +13,8 @@ import Profile from "./components/profile/Profile.js";
 import ViewProfile from './components/viewProfile/ViewProfile';
 import Wallet from "./components/Wallet/wallet/Wallet.js";
 import Transaction from "./components/Wallet/transactions/Transaction.js";
+import Task from "./components/task/task/Task.js";
+import GetTask from "./components/task/getTask/GetTask.js";
 function App() {
   return (
     <div className="App">
@@ -29,6 +31,8 @@ function App() {
          <Route exact path="/profile" element={<ViewProfile/>}></Route>
          <Route exact path="/wallet" element={<Wallet/>}></Route>
          <Route exact path="/transaction" element={<Transaction/>}></Route>
+         <Route exact path="/task" element={<Task/>}></Route>
+         <Route exact path="/getTasks" element={<GetTask/>}></Route>
          <Route path='*' element={<ServerHome/>}></Route>
       </Routes>
     </div>

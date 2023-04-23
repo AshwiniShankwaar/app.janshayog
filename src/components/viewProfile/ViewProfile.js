@@ -398,7 +398,7 @@ const ViewProfile = () => {
                     <button onClick={handleDeactivate} id="deactivateButton">
                       Deactivate
                     </button>
-                    <button className="cancelButton" onClick={handleCancel} id="deactivateButton">
+                    <button className="cancelButton" onClick={handleCancel}>
                       Cancel
                     </button>
                   </div>

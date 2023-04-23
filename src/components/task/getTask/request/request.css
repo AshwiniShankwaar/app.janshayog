@@ -1,0 +1,12 @@
+.flexDiv{
+    display: flex;
+}
+#request p{
+    margin: 5px;
+}
+#request p label{
+    font-weight:600;
+}
+.rightShift{
+    float: right;
+}

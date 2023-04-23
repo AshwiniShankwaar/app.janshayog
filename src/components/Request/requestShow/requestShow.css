@@ -1,0 +1,18 @@
+#seachBar h1{
+    font-size: 18px;
+}
+#seachBar{
+    width: -webkit-fill-available;
+    padding: 10px;
+}
+#request{
+    margin: 10px;
+    border-radius: 10px;
+    /* background: #e0e0e0; */
+    box-shadow: 1px 1px 1px #d9d9d9, -1px -1px 1px #e7e7e7;
+}
+.requestShow{
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+}

@@ -1,7 +1,9 @@
 import { toast } from "react-toastify";
 import "./requestRegister.css";
 import { useEffect, useState } from "react";
+// import { useNavigate } from "react-router-dom";
 const RequestRegister = () => {
+  // const navigate = useNavigate();
   const accountId = sessionStorage.getItem("AccountId");
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
@@ -17,11 +19,12 @@ const RequestRegister = () => {
   const [skills, setSkills] = useState("");
   const [payableAmount, setPayableAmount] = useState(null);
   const [description, setDescription] = useState("");
-  const [eligal, setEligal] = useState(false);
+  const [legal, setLegal] = useState(false);
   const [agree, setAgree] = useState(false);
   //wallet data
 
-  const [balance, setBalance] = useState(null);
+
+  const [object,setObject] = useState(null);
 
   const objCreate = () => {
     let object = {
@@ -29,57 +32,62 @@ const RequestRegister = () => {
       title: title,
       date: date,
       time: time,
-      address: street+addressLine1+district+state+zip+country,
+      address: street+"\\"+addressLine1+"\\"+district+"\\"+state+"\\"+zip+"\\"+country,
       timePeriod: timePeriod,
       noPeople: noPeople,
       skills: skills,
       payableAmount: payableAmount,
       description: description,
-      illegal: eligal,
+      legal: legal,
       agree: agree,
     };
     return object;
   };
   
-  const fetchWalletData = async (id) => {
-    try {
-      const response = await fetch(
-        `http://localhost:8080/api/wallet/walletData?id=${id}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        }
-      );
-      const data = await response.json();
-      setBalance(data.wallet.balance);
-    } catch (e) {
-      console.log(e);
-    }
-  };
+ useEffect(()=>{
+  if(object!==null){
+    console.log(object);
+    fetch(`http://localhost:8080/api/request/createRequest`,{
+      method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(object),
+    })
+    .then((response) => {
+      return response.json();
+    })
+    .then((res)=>{
+      if(res.status==="created"){
+        toast.success("Request created successfully with request id "+res.request.id);
+          console.log(res);
+          setTimeout(() => {
+            //navigate("/task?requestId="+res.request.id);
+            window.location.href = "/task?requestId="+res.request.id;
+          }, 3000);
+      }else{
+        toast.error("Request not created");
+      }
+    }).catch((err)=>{
+      console.log(err);
+    })
+  }
+},[object]);
 
-  useEffect(()=>{
-    fetchWalletData(accountId);
-  },[accountId])
-
-
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit =(e)=>{
     e.preventDefault();
-    if(balance>=payableAmount){
-      // console.log("ok");
-      const object = objCreate();
-      console.log(object);
-      //fetch("http://localhost:8080/api/wallet/addRequest");
-    }else{
-      toast.error("You have not enough balance");
+    if(legal){
+      if(agree){
+        setObject(objCreate());
+      }
     }
+   
   }
 
   return (
     <>
-      <h2>Enter your Request details</h2>
+     <div id="dashboardMain">
+     <h2>Enter your Request details</h2>
       <form onSubmit={handleFormSubmit}>
       <div className="div">
         <label htmlFor="title">Request Title:</label>
@@ -245,13 +253,13 @@ const RequestRegister = () => {
       <div className="checkbox">
         <input
           type="checkbox"
-          name="eligal"
-          value={eligal || ""}
+          name="legal"
+          value={legal || ""}
           onChange={(e) => {
-            setEligal(!eligal);
+            setLegal(!legal);
           }}
         />
-        <label htmlFor="eligal"> No eligal activity is performed.</label>
+        <label htmlFor="legal"> No legal activity is performed.</label>
       </div>
       <div className="checkbox">
         <input
@@ -268,8 +276,9 @@ const RequestRegister = () => {
           condition.{" "}
         </label>
       </div>
-      <button>Submit</button>
+      <button className="button">Submit</button>
       </form>
+     </div>
     </>
   );
 };

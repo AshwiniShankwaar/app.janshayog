@@ -1,0 +1,40 @@
+#updateTaskTitle{
+    justify-content: space-between;
+    align-items: center;
+}
+#updateTaskTitle h2{
+    margin: 0px;
+}
+.updatePopUp form{
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+}
+.updatePopUp form .div{
+    align-items: center;
+    gap:1rem
+}
+.updatePopUp form button{
+    width: 100px;
+    align-self: center;
+}
+.updatePopUp div i{
+    font-size:large;
+}
+.updatePopUp form .div label{
+    min-width: fit-content;
+}
+.updatePopUp form #payableAmount .msg{
+    font-size: 10px;
+}
+.updatePopUp form div textarea{
+    width: -webkit-fill-available;
+    height: 150px;
+}
+#smallinput{
+    width:70px;
+}
+.updatePopUp form div input{
+    width: -webkit-fill-available;
+    padding:5px;
+}
