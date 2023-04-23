@@ -290,7 +290,7 @@ const ShowTask = (props) => {
             </div>
           </div>
         )}
-        <button className={props.request.request.requestStatus !== "underProcessing"
+        <button className={(props.request.request.requestStatus === "helperAssignment")
       ? "buttonShow buttonTask"
       : "buttonHide buttonTask"} onClick={handleJoin}>
           {props.present ? "Revoke Request" : "Join Request"}

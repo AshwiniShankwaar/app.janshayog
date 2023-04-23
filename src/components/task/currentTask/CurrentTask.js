@@ -108,6 +108,7 @@ const CurrentTask = (props) => {
   const handleCancel = () => {
     setOtpShow(!otpShow);
     setGenerateOtp(false);
+    window.location.reload();
   };
   const fetchOtp = ()=>{
     return fetch(`http://localhost:8080/api/request/requestComplete?requestId=${props.request.request.id}`)

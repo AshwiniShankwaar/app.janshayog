@@ -7,6 +7,7 @@ import RequestRegister from "../Request/requestRegister/RequestRegister.js";
 import RequestShow from "../Request/requestShow/RequestShow.js";
 import Balance from "../Wallet/balance/Balance.js";
 import Ongoing from "../Request/ongoing/Ongoing";
+import OpenRequest from "../Request/openRequest/OpenRequest.js";
 import CompleteTask from "../Request/completed/CompleteTask";
 const Dashboard = () => {
   const location = useLocation();
@@ -123,6 +124,9 @@ const Dashboard = () => {
               </div>
             </>
           )}
+        </div>
+        <div className="dashboard-box">
+            <OpenRequest />
         </div>
         <div className="dashboard-box">
             <Ongoing />
