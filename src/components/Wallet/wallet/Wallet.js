@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import TransactionData from "../transaction/Transaction.js";
 import Balance from "../balance/Balance.js";
 import CompleteTask from "../../Request/completed/CompleteTask";
-import Ongoing from "../../Request/ongoing/Ongoing";
+import { BASH_URL } from "../../../URL";
 const Wallet = () => {
   const accountId = sessionStorage.getItem("AccountId");
   const [transactions, setTransactions] = useState([]);
@@ -17,7 +17,7 @@ const Wallet = () => {
     const fetchdata = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/wallet/walletData?id=${accountId}`,
+          `${BASH_URL}api/wallet/walletData?id=${accountId}`,
           {
             method: "GET",
             headers: {

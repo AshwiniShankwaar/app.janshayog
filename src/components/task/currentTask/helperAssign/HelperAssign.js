@@ -1,12 +1,13 @@
 import './helperAssign.css';
 import { useEffect,useState } from 'react';
+import { BASH_URL } from '../../../../URL';
 const HelperAssign = (props) =>{
     //console.log(props.accountId);
     const accountId = props.accountId;
     const [user,setUser] = useState(null);
     const fetchUserDetails = (id) => {
         try {
-          fetch(`http://localhost:8080/api/account/getUserData?id=${id}`, {
+          fetch(`${BASH_URL}api/account/getUserData?id=${id}`, {
             method: "GET",
             headers: {
               "Content-Type": "application/json",

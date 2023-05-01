@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ServerHome from "../serverhome.js";
+import { BASH_URL } from "../../URL";
 const Register = () => {
   const { type } = useParams();
   const navigate = useNavigate();
@@ -61,7 +62,7 @@ const Register = () => {
         setIsLoading(true);
         console.log(obj);
         console.log(type);
-        fetch("http://localhost:8080/api/account/registration", {
+        fetch(`${BASH_URL}api/account/registration`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

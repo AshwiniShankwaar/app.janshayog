@@ -6,6 +6,7 @@ import CompleteTask from "../../Request/completed/CompleteTask.js";
 import Ongoing from "../../Request/ongoing/Ongoing";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { BASH_URL } from "../../../URL";
 const GetTask = () => {
   const location = useLocation();
   const accountId = new URLSearchParams(location.search).get("accountId");
@@ -51,7 +52,7 @@ const GetTask = () => {
 
   const fetchData = (accountId, state) => {
     const url = accountrType==="helper"?"getRequestHelper":"getRequest"
-    fetch(`http://localhost:8080/api/request/${url}?accountId=${accountId}&&state=${state}`,
+    fetch(`${BASH_URL}api/request/${url}?accountId=${accountId}&&state=${state}`,
       {
         method: "GET",
         headers: {

@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import Balance from "../balance/Balance.js";
 import TransactionData from "../transaction/Transaction.js";
 import CompleteTask from "../../Request/completed/CompleteTask";
+import { BASH_URL } from "../../../URL";
 const Transaction = () => {
   const location = useLocation();
   const querySearch = new URLSearchParams(location.search);
@@ -22,7 +23,7 @@ const Transaction = () => {
     const fetchdata = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/wallet/${walletId}`,
+          `${BASH_URL}api/wallet/${walletId}`,
           {
             method: "GET",
             headers: {

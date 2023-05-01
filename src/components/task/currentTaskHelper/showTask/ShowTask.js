@@ -3,6 +3,7 @@ import "./showTask.css";
 import HelperAssign from "../../currentTask/helperAssign/HelperAssign.js";
 import jsPDF from "jspdf";
 import { toast } from "react-toastify";
+import { BASH_URL } from "../../../../URL";
 const ShowTask = (props) => {
   console.log(props);
   const [otpShow, setOtpShow] = useState(false);
@@ -103,7 +104,7 @@ const ShowTask = (props) => {
       setShowPopup(!showPopup);
     } else {
       fetch(
-        `http://localhost:8080/api/request/addHelper?requestId=
+        `${BASH_URL}api/request/addHelper?requestId=
     ${props.request.request.id}&&accountId=${sessionStorage.getItem(
           "AccountId"
         )}`,
@@ -134,7 +135,7 @@ const ShowTask = (props) => {
     }
   };
   const handleRevoke = () => {
-    fetch(`http://localhost:8080/api/request/removeHelper?requestId=
+    fetch(`${BASH_URL}api/request/removeHelper?requestId=
     ${props.request.request.id}&&accountId=${sessionStorage.getItem(
           "AccountId"
         )}`,{
@@ -163,7 +164,7 @@ const ShowTask = (props) => {
     setOtpShow(!otpShow);
   }
   const verifyOtp = (otp)=>{
-    return fetch(`http://localhost:8080/api/request/verifyRequestOtp?requestId=${props.request.request.id}&&otp=${otp}`).then((res)=>{
+    return fetch(`${BASH_URL}api/request/verifyRequestOtp?requestId=${props.request.request.id}&&otp=${otp}`).then((res)=>{
       return res.json()
     }).then((res)=>{
       console.log(res);

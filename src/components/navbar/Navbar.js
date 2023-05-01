@@ -1,5 +1,5 @@
 import "./navbar.css";
-import logo from "./logo.svg";
+import logo_long from "../../images/logo_long.png";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <>
       <div id="navbar">
-        <img src={logo} alt="logo" />
+        <img src={logo_long} alt="logo" />
         <div id="nav" className={clicked ? "#nav active" : "#nav"}>
           <div id="nav-link">
             <NavLink to="/Dashboard">Dashboard</NavLink>

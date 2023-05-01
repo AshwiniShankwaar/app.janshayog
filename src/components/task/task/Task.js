@@ -5,6 +5,7 @@ import CurrentTask from "../currentTask/CurrentTask.js";
 import Ongoing from "../../Request/ongoing/Ongoing";
 import CompleteTask from "../../Request/completed/CompleteTask";
 import HelperCurrentTask from "../currentTaskHelper/CurrentTask.js";
+import {BASH_URL} from "../../../URL.js";
 const Task = () => {
   const location = useLocation();
    const requestId = new URLSearchParams(location.search).get("requestId");
@@ -12,7 +13,7 @@ const Task = () => {
    const [request,setRequest] = useState();
 
    const fetchDataByRequestId = (requestId)=>{
-    fetch(`http://localhost:8080/api/request/requestData?requestId=${requestId}`, {
+    fetch(`${BASH_URL}api/request/requestData?requestId=${requestId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +24,7 @@ const Task = () => {
       .then((data) => setRequest(data));
    }
    const fetchDataByAccountId = (accountId)=>{
-    fetch(`http://localhost:8080/api/request/latestRequest?id=${accountId}`, {
+    fetch(`${BASH_URL}api/request/latestRequest?id=${accountId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

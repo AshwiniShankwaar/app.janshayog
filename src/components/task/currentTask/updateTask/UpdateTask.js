@@ -1,6 +1,7 @@
 import "./updateTask.css";
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
+import { BASH_URL } from "../../../../URL";
 const UpdateTask = (props) => {
   const request = props.request.request;
   const accountId = sessionStorage.getItem("AccountId");
@@ -68,7 +69,7 @@ const UpdateTask = (props) => {
   useEffect(()=>{
     if(object!==null){
       console.log(object);
-      fetch(`http://localhost:8080/api/request/updateRequest?requestId=${request.id}`,{
+      fetch(`${BASH_URL}api/request/updateRequest?requestId=${request.id}`,{
         method: "POST",
           headers: {
             "Content-Type": "application/json",

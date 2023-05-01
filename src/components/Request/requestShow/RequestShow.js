@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import "./requestShow.css";
 import SearchBar from "./searchbar/SearchBar.js";
 import Request from "../../task/getTask/request/Request.js";
-
+import { BASH_URL } from "../../../URL";
 const RequestShow = () => {
   const accountId = sessionStorage.getItem("AccountId");
   const [requestList, setRequestList] = useState([]);
 
   const fetchOpenRequests = () => {
-    fetch(`http://localhost:8080/api/request/openRequest`, {
+    fetch(`${BASH_URL}api/request/openRequest`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,7 @@ const RequestShow = () => {
   };
 
   const fetchRequestsBySkill = (skill) => {
-    fetch(`http://localhost:8080/api/request/${skill}`, {
+    fetch(`${BASH_URL}api/request/${skill}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

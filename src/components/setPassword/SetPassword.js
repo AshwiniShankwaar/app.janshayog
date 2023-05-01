@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import "./SetPassword.css";
 import {toast} from "react-toastify";
+import { BASH_URL } from "../../URL";
 const SetPassword = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -38,7 +39,7 @@ const SetPassword = () => {
         let obj = {accountId,token,password};
         setIsLoading(true);
         console.log(obj);
-        fetch("http://localhost:8080/api/account/setPassword",{
+        fetch(`${BASH_URL}api/account/setPassword`,{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

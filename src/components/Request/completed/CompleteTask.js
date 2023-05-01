@@ -2,6 +2,7 @@ import './completeTask.css';
 import SideTaskBar from "../Task/sideTaskBar/SideTaskBar";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { BASH_URL } from '../../../URL';
 const CompleteTask = ()=>{
     const [requestDetails, setRequestDetails] = useState(null);
     const accountId = sessionStorage.getItem("AccountId");
@@ -9,7 +10,7 @@ const CompleteTask = ()=>{
     const getOngoingTaskByAccountId = (id) => {
       const url = accountrType==="helper"?"getRequestHelper":"getRequest"
       fetch(
-        `http://localhost:8080/api/request/${url}?accountId=${id}&&state=Completed`,
+        `${BASH_URL}api/request/${url}?accountId=${id}&&state=Completed`,
         {
           method: "GET",
           headers: {

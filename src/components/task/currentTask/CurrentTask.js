@@ -3,6 +3,7 @@ import "./currentTask.css";
 import HelperAssign from "./helperAssign/HelperAssign.js";
 import UpdateTask from "./updateTask/UpdateTask.js";
 import jsPDF from 'jspdf';
+import { BASH_URL } from "../../../URL";
 const CurrentTask = (props) => {
   console.log(props);
   const [updatePopup,setUpdatePopup] = useState(false);
@@ -111,7 +112,7 @@ const CurrentTask = (props) => {
     window.location.reload();
   };
   const fetchOtp = ()=>{
-    return fetch(`http://localhost:8080/api/request/requestComplete?requestId=${props.request.request.id}`)
+    return fetch(`${BASH_URL}api/request/requestComplete?requestId=${props.request.request.id}`)
     .then((response) => {
       return response.json();
     })

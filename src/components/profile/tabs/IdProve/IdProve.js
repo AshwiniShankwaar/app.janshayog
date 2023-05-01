@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./idProve.css";
+import { BASH_URL } from "../../../../URL.js";
 const IdProve = ({
   idSerialNo,
   setIdSerialNo,
@@ -46,7 +47,7 @@ const IdProve = ({
 
   const getFile = (serialNo,idType) => {
     //console.log(serialNo);
-    fetch(`http://localhost:8080/api/account/file?idSerialNo=${serialNo}`, {
+    fetch(`${BASH_URL}api/account/file?idSerialNo=${serialNo}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -87,7 +88,7 @@ const IdProve = ({
     const fileInput = document.querySelector("#GovermentIdProve");
     const formData = new FormData();
     formData.append("file", fileInput.files[0]);
-    fetch("http://localhost:8080/api/account/IdProveUpload", {
+    fetch(`${BASH_URL}api/account/IdProveUpload`, {
       method: "POST",
       body: formData,
     })
@@ -106,7 +107,7 @@ const IdProve = ({
     const formData = new FormData();
     formData.append("file", fileInput.files[0]);
 
-    fetch("http://localhost:8080/api/account/IdProveUpload", {
+    fetch(`${BASH_URL}api/account/IdProveUpload`, {
       method: "POST",
       body: formData,
     })

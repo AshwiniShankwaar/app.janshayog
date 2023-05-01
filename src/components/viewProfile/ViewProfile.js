@@ -4,6 +4,7 @@ import Navbar from "../navbar/Navbar.js";
 import dpImage from "../../images/dp.png";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import {BASH_URL} from "../../URL.js";
 const ViewProfile = () => {
   const navigate = useNavigate();
   const accountId = sessionStorage.getItem("AccountId");
@@ -40,7 +41,7 @@ const ViewProfile = () => {
 
   function handleDeactivate() {
     // Fetch API to deactivate account here
-    fetch(`http://localhost:8080/api/account/deactivate?accountId=${accountId}`,{
+    fetch(`${BASH_URL}api/account/deactivate?accountId=${accountId}`,{
       method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -76,7 +77,7 @@ const ViewProfile = () => {
   }
   const fetchUserDetails = (id) => {
     try {
-      fetch(`http://localhost:8080/api/account/getUserData?id=${id}`, {
+      fetch(`${BASH_URL}api/account/getUserData?id=${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -157,7 +158,7 @@ const ViewProfile = () => {
   };
   const getFile = (serialNo, idType) => {
     //console.log(serialNo);
-    fetch(`http://localhost:8080/api/account/file?idSerialNo=${serialNo}`, {
+    fetch(`${BASH_URL}api/account/file?idSerialNo=${serialNo}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

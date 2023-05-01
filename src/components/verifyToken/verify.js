@@ -1,5 +1,6 @@
 import { useLocation} from "react-router-dom";
 import './verify.css';
+import {LANDING_URL} from "../../URL.js";
 const Verify =() =>{
     const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -8,7 +9,7 @@ const Verify =() =>{
     sessionStorage.removeItem("AccountType");
     sessionStorage.removeItem("EmailId");
   const handleClick = () =>{
-    window.location.href = "http://localhost:3001/";
+    window.location.href = `${LANDING_URL}`;
   }
    if(message==="invalidToken"){
        return (

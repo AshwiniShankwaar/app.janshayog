@@ -6,6 +6,7 @@ import PersonalInfo from "./personalInfo/PersonalInfo.js";
 import Address from "./Address/Address.js";
 import IdProve from "./IdProve/IdProve.js";
 import Emergency from "./EmergencyContact/Emergency.js";
+import { BASH_URL } from "../../../URL.js";
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [accountId, setAccountId] = useState(
@@ -275,7 +276,7 @@ const Tabs = () => {
   // });
 
   const addUserDetails = (obj) => {
-    fetch("http://localhost:8080/api/account/saveDetails", {
+    fetch(`${BASH_URL}api/account/saveDetails`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -307,7 +308,7 @@ const Tabs = () => {
 
   const fetchUserDetails = (id) => {
     try {
-      fetch(`http://localhost:8080/api/account/userDetails?id=${id}`, {
+      fetch(`${BASH_URL}api/account/userDetails?id=${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

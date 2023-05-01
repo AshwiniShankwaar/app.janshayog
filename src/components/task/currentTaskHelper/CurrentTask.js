@@ -1,14 +1,14 @@
 import './currentTask.css';
 import { useEffect, useState } from 'react';
 import ShowTask from './showTask/ShowTask.js';
-
+import { BASH_URL } from '../../../URL';
 const HelperCurrentTask = (props) => {
   const requestId = props.requestId;
   const [request, setRequest] = useState(null);
   const [present, setPresent] = useState(false);
 
   const fetchDataByRequestId = (requestId) => {
-    fetch(`http://localhost:8080/api/request/requestData?requestId=${requestId}`, {
+    fetch(`${BASH_URL}api/request/requestData?requestId=${requestId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -19,7 +19,7 @@ const HelperCurrentTask = (props) => {
       .then((data) => setRequest(data));
   };
   const fetchDataByAccountId = (accountId)=>{
-    fetch(`http://localhost:8080/api/request/getLatestRequestHelper?accountId=${accountId}`, {
+    fetch(`${BASH_URL}api/request/getLatestRequestHelper?accountId=${accountId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

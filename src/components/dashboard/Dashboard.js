@@ -3,6 +3,7 @@ import Navbar from "../navbar/Navbar.js";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { BASH_URL } from "../../URL.js";
 import RequestRegister from "../Request/requestRegister/RequestRegister.js";
 import RequestShow from "../Request/requestShow/RequestShow.js";
 import Balance from "../Wallet/balance/Balance.js";
@@ -31,7 +32,7 @@ const Dashboard = () => {
   }
   //const [accountCheck,setAccountCheck] = useState();
   function checkAccount() {
-    fetch(`http://localhost:8080/api/account/user?accountId=${accountId}`, {
+    fetch(`${BASH_URL}api/account/user?accountId=${accountId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +70,7 @@ const Dashboard = () => {
     const fetchdata = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/wallet/walletData?id=${accountId}`,
+          `${BASH_URL}api/wallet/walletData?id=${accountId}`,
           {
             method: "GET",
             headers: {

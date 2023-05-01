@@ -1,6 +1,7 @@
 import "./forget.css";
 import {useState} from "react";
 import {toast} from "react-toastify";
+import { BASH_URL } from "../../URL";
 const Forget =()=>{
     const [email,setEmail]=useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -29,7 +30,7 @@ const Forget =()=>{
        if(isValid()){
         setIsLoading(true);
         console.log(obj);
-        fetch("http://localhost:8080/api/account/forgetPassword",{
+        fetch(`${BASH_URL}api/account/forgetPassword`,{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,6 +1,7 @@
 import './withdraw.css';
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import {BASH_URL} from "../../../URL.js"
 const Withdraw = (props)=>{
         const [isLoading, setIsLoading] = useState(false);
         const accountId = sessionStorage.getItem("AccountId");
@@ -10,7 +11,7 @@ const Withdraw = (props)=>{
       
         const transaction = async (obj) =>{
           try{
-            const fetchData = await fetch(`http://localhost:8080/api/wallet/transaction`,{
+            const fetchData = await fetch(`${BASH_URL}api/wallet/transaction`,{
             method: "POST",
                 headers: {
                   "Content-Type": "application/json",

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ServerHome from "../serverhome.js";
+import { BASH_URL } from "../../URL";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -53,7 +54,7 @@ const Login = () => {
         setIsLoading(true);
         console.log(obj);
         console.log(type);
-        fetch("http://localhost:8080/api/account/login", {
+        fetch(`${BASH_URL}api/account/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

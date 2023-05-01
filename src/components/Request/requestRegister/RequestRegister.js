@@ -1,6 +1,7 @@
 import { toast } from "react-toastify";
 import "./requestRegister.css";
 import { useEffect, useState } from "react";
+import { BASH_URL } from "../../../URL";
 // import { useNavigate } from "react-router-dom";
 const RequestRegister = () => {
   // const navigate = useNavigate();
@@ -47,7 +48,7 @@ const RequestRegister = () => {
  useEffect(()=>{
   if(object!==null){
     console.log(object);
-    fetch(`http://localhost:8080/api/request/createRequest`,{
+    fetch(`${BASH_URL}api/request/createRequest`,{
       method: "POST",
         headers: {
           "Content-Type": "application/json",
